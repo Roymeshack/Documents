@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Roy Electrical Works — Electrical Technician</title>
+    <meta name="description" content="Roy Electrical Works — professional electrical technician services. Contact +254740670523. LinkedIn: roymeshack" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg1:#738cb4;
+            --accent1:#ff6b6b;
+            --accent2:#ffd166;
+            --card:#2b4375ab;
+            --glass: rgba(255,255,255,0.06);
+            --muted: #b6b9bd;
+        }
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+            background: linear-gradient(135deg,#864c16 0%, #07183a 40%, #0b2a3f 100%);
+            color:#e8eef8;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.45;
+        }
+        .container{max-width:1100px;margin:28px auto;padding:24px}
+        header{
+            display:flex;align-items:center;justify-content:space-between;gap:20px;
+            background:linear-gradient(90deg, rgba(74, 75, 68, 0.03), rgba(255,255,255,0.01));
+            padding:14px 20px;border-radius:12px;
+            box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+            backdrop-filter: blur(6px);
+        }
+        .brand{display:flex;align-items:center;gap:14px}
+        .logo{
+            width:56px;height:56px;border-radius:12px;
+            background:linear-gradient(135deg,var(--accent1),var(--accent2));
+            display:flex;align-items:center;justify-content:center;font-weight:700;color:#071422;
+            box-shadow:0 6px 18px rgba(255,107,107,0.12), inset 0 -6px 18px rgba(255,255,255,0.08);
+            font-size:18px;
+        }
+        h1{margin:0;font-size:20px}
+        .nav-actions{display:flex;gap:10px;align-items:center}
+        .btn{
+            display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;
+            background:var(--glass);color:var(--muted);text-decoration:none;border:1px solid rgba(255,255,255,0.04);
+            transition:transform .18s ease,box-shadow .18s ease;
+        }
+        .btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(8,20,40,0.5)}
+        .hero{
+            margin-top:20px;padding:36px;border-radius:16px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:center;
+            box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+        }
+        .hero-left h2{margin:0 0 12px 0;font-size:34px;line-height:1.05}
+        .lead{color:var(--muted);margin-bottom:18px}
+        .contact-card{
+            background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);
+            display:flex;flex-direction:column;gap:10px;align-items:center;
+        }
+        .phone{font-weight:700;font-size:18px;color:#fff}
+        .links{display:flex;gap:10px;margin-top:8px}
+        .link-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#071422;text-decoration:none;font-weight:600}
+        .services{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+        .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.5)}
+        .card h3{margin:0 0 8px 0}
+        .muted{color:var(--muted);font-size:14px}
+        .gallery{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+        .gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(2,6,23,0.45)}
+        footer{margin-top:26px;padding:16px;border-radius:12px;text-align:center;color:var(--muted);font-size:14px}
+        /* responsive */
+        @media (max-width:980px){
+            .hero{grid-template-columns:1fr; padding:22px}
+            .services{grid-template-columns:repeat(2,1fr)}
+            .gallery{grid-template-columns:repeat(3,1fr)}
+            .hero-left h2{font-size:28px}
+        }
+        @media (max-width:640px){
+            .container{padding:16px;margin:10px}
+            .services{grid-template-columns:1fr}
+            .gallery{grid-template-columns:repeat(2,1fr)}
+            header{flex-direction:column;align-items:flex-start;gap:12px}
+        }
+
+        /* subtle float animation for hero image */
+        .hero-img{
+            border-radius:12px;overflow:hidden;
+            transform:translateY(0);
+            transition:transform .6s cubic-bezier(.2,.9,.2,1);
+        }
+        .hero-img:hover{transform:translateY(-8px) scale(1.01)}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">REW</div>
+                <div>
+                    <h1>Roy Electrical Works</h1>
+                    <div class="muted">Reliable Electrical Technician — Wiring, Installations & Repairs</div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <a class="btn" href="#services">Services</a>
+                <a class="btn" href="#gallery">Gallery</a>
+                <a class="btn" href="#contact">Contact</a>
+            </div>
+        </header>
+
+        <section class="hero" aria-label="Hero">
+            <div class="hero-left">
+                <h2>Professional Electrical Services — Safe, Fast & Certified</h2>
+                <p class="lead">Roy Electrical Works provides domestic and commercial electrical installations, fault finding, maintenance and emergency repairs across the region. Experienced, insured and committed to high-quality workmanship.</p>
+
+                <div class="services" id="services" aria-label="Services">
+                    <div class="card">
+                        <h3>Wiring & Rewiring</h3>
+                        <div class="muted">New builds, renovations and upgrades with compliant wiring and safety testing.</div>
+                    </div>
+                    <div class="card">
+                        <h3>Installations</h3>
+                        <div class="muted">Lighting, switches, panels, switchboards and appliance installations.</div>
+                    </div>
+                    <div class="card">
+                        <h3>Repairs & Maintenance</h3>
+                        <div class="muted">Quick fault diagnosis, repairs and scheduled maintenance to keep systems safe.</div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="contact-card" id="contact">
+                <div style="text-align:center">
+                    <div style="font-size:13px;color:var(--muted);">Call or WhatsApp</div>
+                    <div class="phone">+254 740 670 523</div>
+                    <div style="margin-top:6px;font-size:13px;color:var(--muted)">Available Mon-Sat · Emergency response</div>
+                </div>
+
+                <div class="links" style="margin-top:12px">
+                    <a class="link-btn" href="tel:+254740670523">
+                        <!-- phone SVG -->
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                            <path d="M21 16.5v4a1.5 1.5 0 0 1-1.7 1.48 19.54 19.54 0 0 1-8.63-3.07 19.25 19.25 0 0 1-6-6A19.54 19.54 0 0 1 3 4.8 1.5 1.5 0 0 1 4.5 3h4A1.5 1.5 0 0 1 10 4.4c.04.7.18 1.39.42 2.04a1.5 1.5 0 0 1-.33 1.5L9.2 9.9a14.5 14.5 0 0 0 6 6l1.95-1.95a1.5 1.5 0 0 1 1.5-.33c.66.24 1.35.38 2.05.42A1.5 1.5 0 0 1 21 16.5z" fill="#071422"/>
+                        </svg>
+                        Call
+                    </a>
+
+                    <a class="link-btn" href="https://www.linkedin.com/in/roymeshack" target="_blank" rel="noopener">
+                        <!-- linkedin SVG -->
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                            <path d="M4.98 3.5A2.5 2.5 0 1 1 4.98 8.5a2.5 2.5 0 0 1 0-5zm.02 6.5H2v12h3V10zM9 10h-3v12h3v-6.6c0-3.85 5-4.16 5 0V22h3V13.1c0-7-7.5-6.77-8-3.1V10z" fill="#071422"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+
+                <div style="margin-top:14px;width:100%;text-align:center;font-size:13px;color:var(--muted)">
+                    Serving homes & businesses — quotes available
+                </div>
+            </aside>
+        </section>
+
+        <section id="gallery" aria-label="Gallery" style="margin-top:18px">
+            <h2 style="margin:0 0 12px 0">Project Gallery</h2>
+            <div class="gallery" role="list">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?electrician,tools" alt="Electrician tools and hands working">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?wires,wiring" alt="Wiring installation close up">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?circuit,breaker" alt="Circuit breaker and panel">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?installation,lighting" alt="Lighting installation project">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?safety,goggles" alt="Safety equipment and inspection">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?generator,service" alt="Generator service">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?electrician,van" alt="Electrician van and tools">
+                <img role="listitem" class="hero-img" src="https://source.unsplash.com/800x600/?home,electrical" alt="Home electrical work">
+            </div>
+        </section>
+
+        <footer>
+            <div style="margin-bottom:8px">Roy Electrical Works — Contact: <strong>+254 740 670 523</strong></div>
+            <div style="font-size:13px;color:var(--muted)">LinkedIn: <a href="https://www.linkedin.com/in/roymeshack" target="_blank" rel="noopener" style="color:var(--accent2);text-decoration:none">www.linkedin.com/in/roymeshack</a></div>
+            <div style="margin-top:10px;color:rgba(255,255,255,0.06);font-size:12px">© Roy Electrical Works</div>
+        </footer>
+    </div>
+</body>
+</html></div></a>
